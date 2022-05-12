@@ -32,10 +32,6 @@ namespace VeterinarioBasico_2022
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaPrincipal));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.veterinarioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.veterinarioDataSet = new VeterinarioBasico_2022.veterinarioDataSet();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBoxDueño = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,15 +62,22 @@ namespace VeterinarioBasico_2022
             this.label7 = new System.Windows.Forms.Label();
             this.Dia = new System.Windows.Forms.Label();
             this.insertaCita = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.veterinarioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.veterinarioDataSet = new VeterinarioBasico_2022.veterinarioDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSet)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,32 +95,6 @@ namespace VeterinarioBasico_2022
             this.tabControl1.Size = new System.Drawing.Size(1424, 794);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8_computer.ico");
-            this.imageList1.Images.SetKeyName(1, "icons8_elephant.ico");
-            this.imageList1.Images.SetKeyName(2, "icons8_foul.ico");
-            this.imageList1.Images.SetKeyName(3, "icons8_steve_jobs.ico");
-            this.imageList1.Images.SetKeyName(4, "icons8_search.ico");
-            // 
-            // imageList2
-            // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // veterinarioDataSetBindingSource
-            // 
-            this.veterinarioDataSetBindingSource.DataSource = this.veterinarioDataSet;
-            this.veterinarioDataSetBindingSource.Position = 0;
-            // 
-            // veterinarioDataSet
-            // 
-            this.veterinarioDataSet.DataSetName = "veterinarioDataSet";
-            this.veterinarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage1
             // 
@@ -248,6 +225,9 @@ namespace VeterinarioBasico_2022
             // 
             this.tabPage2.BackgroundImage = global::VeterinarioBasico_2022.Properties.Resources.titulo_nido_Mesa_de_trabajo_1_scaled;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.dataGridView3);
@@ -271,10 +251,10 @@ namespace VeterinarioBasico_2022
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(483, 441);
+            this.button3.Location = new System.Drawing.Point(858, 581);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 31);
+            this.button3.Size = new System.Drawing.Size(125, 36);
             this.button3.TabIndex = 8;
             this.button3.Text = "Search";
             this.button3.UseVisualStyleBackColor = true;
@@ -282,7 +262,7 @@ namespace VeterinarioBasico_2022
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(8, 448);
+            this.textBox3.Location = new System.Drawing.Point(383, 588);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(433, 22);
@@ -291,17 +271,17 @@ namespace VeterinarioBasico_2022
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(-4, 502);
+            this.dataGridView3.Location = new System.Drawing.Point(371, 642);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(608, 94);
+            this.dataGridView3.Size = new System.Drawing.Size(608, 99);
             this.dataGridView3.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(8, 240);
+            this.textBox2.Location = new System.Drawing.Point(371, 346);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(433, 22);
@@ -310,7 +290,7 @@ namespace VeterinarioBasico_2022
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 286);
+            this.dataGridView2.Location = new System.Drawing.Point(366, 392);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
@@ -321,7 +301,7 @@ namespace VeterinarioBasico_2022
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(483, 240);
+            this.button2.Location = new System.Drawing.Point(846, 346);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 31);
@@ -333,7 +313,7 @@ namespace VeterinarioBasico_2022
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(236, 144);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -345,7 +325,7 @@ namespace VeterinarioBasico_2022
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(483, 55);
+            this.button1.Location = new System.Drawing.Point(712, 109);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 31);
@@ -356,7 +336,7 @@ namespace VeterinarioBasico_2022
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 55);
+            this.textBox1.Location = new System.Drawing.Point(253, 109);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(433, 22);
@@ -490,6 +470,63 @@ namespace VeterinarioBasico_2022
             this.insertaCita.UseVisualStyleBackColor = false;
             this.insertaCita.Click += new System.EventHandler(this.button3_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8_computer.ico");
+            this.imageList1.Images.SetKeyName(1, "icons8_elephant.ico");
+            this.imageList1.Images.SetKeyName(2, "icons8_foul.ico");
+            this.imageList1.Images.SetKeyName(3, "icons8_steve_jobs.ico");
+            this.imageList1.Images.SetKeyName(4, "icons8_search.ico");
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // veterinarioDataSetBindingSource
+            // 
+            this.veterinarioDataSetBindingSource.DataSource = this.veterinarioDataSet;
+            this.veterinarioDataSetBindingSource.Position = 0;
+            // 
+            // veterinarioDataSet
+            // 
+            this.veterinarioDataSet.DataSetName = "veterinarioDataSet";
+            this.veterinarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(432, 58);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Buscador de Usuarios:";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(47, 277);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(432, 58);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Buscador de Mascotas:";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(79, 504);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(432, 58);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Buscador de Citas:";
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -503,8 +540,6 @@ namespace VeterinarioBasico_2022
             this.Name = "VentanaPrincipal";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSet)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -514,6 +549,8 @@ namespace VeterinarioBasico_2022
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinarioDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -555,6 +592,9 @@ namespace VeterinarioBasico_2022
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

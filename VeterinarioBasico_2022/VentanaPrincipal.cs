@@ -211,5 +211,10 @@ namespace VeterinarioBasico_2022
             conexion.buscarCita(busquedaC);
             dataGridView3.DataSource = conexion.buscarCita(busquedaC);
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

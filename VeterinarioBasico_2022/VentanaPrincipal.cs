@@ -23,6 +23,19 @@ namespace VeterinarioBasico_2022
         public VentanaPrincipal()
         {
             InitializeComponent();
+            insertaCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            insertaCita.FlatAppearance.BorderSize = 0;
+            insertaCita.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            insertaCita.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            insertaCita.BackColor = Color.Transparent;
+
+            
+
+            insertaMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            insertaMascota.FlatAppearance.BorderSize = 0;
+            insertaMascota.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            insertaMascota.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            insertaMascota.BackColor = Color.Transparent;
 
         }
 
@@ -31,12 +44,7 @@ namespace VeterinarioBasico_2022
 
         }
 
-        private void insertaUsuario_Click(object sender, EventArgs e)
-        {
-            String textoPassword = textBoxPass.Text;
-            string myHash = BCrypt.Net.BCrypt.HashPassword(textoPassword, BCrypt.Net.BCrypt.GenerateSalt());
-            MessageBox.Show(conexion.insertaUsuario(textBoxDNI.Text, textBoxNombre.Text, textBoxApellido.Text ,myHash, textBoxEmail.Text));
-        }
+       
         //Al cerrar la segunda pestaña de ventana principal se para la ejecución del programa. 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -154,7 +162,7 @@ namespace VeterinarioBasico_2022
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBoxApellido_TextChanged(object sender, EventArgs e)
@@ -195,6 +203,13 @@ namespace VeterinarioBasico_2022
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show(conexion.insertaCita(textBoxDia.Text, textBoxHora.Text, textBoxMotivo.Text, textBoxMascota.Text));
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            string busquedaC = textBox3.Text.ToString();
+            conexion.buscarCita(busquedaC);
+            dataGridView3.DataSource = conexion.buscarCita(busquedaC);
         }
     }
 }

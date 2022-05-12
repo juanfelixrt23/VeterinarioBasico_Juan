@@ -127,6 +127,17 @@ namespace VeterinarioBasico_2022
             conexion.Close();
             return tabla;
         }
+        public DataTable buscarCita(String busquedaC)
+        {
+            conexion.Open();
+            string query3 = "SELECT * FROM citas WHERE CONCAT(Mascota) LIKE '%" + busquedaC + "%'";
+            MySqlCommand consultaBusqueda = new MySqlCommand(query3, conexion);
+            MySqlDataReader adaptar = consultaBusqueda.ExecuteReader();
+            DataTable tabla = new DataTable();
+            tabla.Load(adaptar);
+            conexion.Close();
+            return tabla;
+        }
     }
     
 }

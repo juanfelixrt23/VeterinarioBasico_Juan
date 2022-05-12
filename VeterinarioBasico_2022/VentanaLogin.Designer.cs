@@ -37,6 +37,7 @@ namespace VeterinarioBasico_2022
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.registrarte2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -71,6 +72,7 @@ namespace VeterinarioBasico_2022
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(215, 22);
             this.textBoxPass.TabIndex = 3;
+            this.textBoxPass.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -106,6 +108,20 @@ namespace VeterinarioBasico_2022
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // registrarte2
+            // 
+            this.registrarte2.BackColor = System.Drawing.Color.Transparent;
+            this.registrarte2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registrarte2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrarte2.ForeColor = System.Drawing.Color.Red;
+            this.registrarte2.Location = new System.Drawing.Point(271, 31);
+            this.registrarte2.Name = "registrarte2";
+            this.registrarte2.Size = new System.Drawing.Size(184, 53);
+            this.registrarte2.TabIndex = 5;
+            this.registrarte2.Text = "REGÍSTRATE!";
+            this.registrarte2.UseVisualStyleBackColor = false;
+            this.registrarte2.Click += new System.EventHandler(this.registrarte_Click);
+            // 
             // VentanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -113,6 +129,7 @@ namespace VeterinarioBasico_2022
             this.BackgroundImage = global::VeterinarioBasico_2022.Properties.Resources._727f506f9aabd7bb12e0a443d3536317;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(547, 636);
+            this.Controls.Add(this.registrarte2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.label2);
@@ -138,5 +155,6 @@ namespace VeterinarioBasico_2022
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button registrarte2;
     }
 }

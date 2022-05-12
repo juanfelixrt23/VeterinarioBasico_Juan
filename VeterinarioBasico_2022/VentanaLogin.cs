@@ -17,6 +17,11 @@ namespace VeterinarioBasico_2022
         public VentanaLogin()
         {
             InitializeComponent();
+            registrarte2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            registrarte2.FlatAppearance.BorderSize = 0;
+            registrarte2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            registrarte2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            registrarte2.BackColor = Color.Transparent;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -53,6 +58,12 @@ namespace VeterinarioBasico_2022
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void registrarte_Click(object sender, EventArgs e)
+        {
+            VentanaRegistrar r = new VentanaRegistrar();
+            r.Show();
         }
     }
 }
